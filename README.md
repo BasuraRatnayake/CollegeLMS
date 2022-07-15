@@ -13,4 +13,4 @@ Batch: BSE 14.2
 
 ## Tech Stack
 
-Java, SQLite, Xuggler, sarxos/webcam-capture
+C#, MySQL, WCF, JWT
