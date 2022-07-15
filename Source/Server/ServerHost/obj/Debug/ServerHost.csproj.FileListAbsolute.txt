@@ -1,0 +1,18 @@
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\bin\Debug\ServerHost.exe.config
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\bin\Debug\ServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\bin\Debug\ServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\bin\Debug\Server.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\bin\Debug\Server.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\obj\Debug\ServerHost.csprojResolveAssemblyReference.cache
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\obj\Debug\ServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\Server\ServerHost\obj\Debug\ServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\bin\Debug\ServerHost.exe.config
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\obj\Debug\ServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\obj\Debug\ServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\bin\Debug\ServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\bin\Debug\ServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\bin\Debug\Server.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\bin\Debug\Server.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\Server\ServerHost\obj\Debug\ServerHost.csprojResolveAssemblyReference.cache

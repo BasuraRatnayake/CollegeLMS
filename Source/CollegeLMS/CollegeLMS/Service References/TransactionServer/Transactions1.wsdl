@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Transactions" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.12:8733/TransactionServer/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.12:8733/TransactionServer/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransactions_issueBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:issueBook" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:issueBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueComic_InputMessage">
+    <wsdl:part name="parameters" element="tns:issueComic" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueComic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:issueComicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issuePastP_InputMessage">
+    <wsdl:part name="parameters" element="tns:issuePastP" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issuePastP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:issuePastPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueNewsMag_InputMessage">
+    <wsdl:part name="parameters" element="tns:issueNewsMag" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueNewsMag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:issueNewsMagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueVidDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:issueVidDoc" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issueVidDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:issueVidDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_unReturnedCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:unReturnedCount" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_unReturnedCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unReturnedCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_resourcedIssued_InputMessage">
+    <wsdl:part name="parameters" element="tns:resourcedIssued" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_resourcedIssued_OutputMessage">
+    <wsdl:part name="parameters" element="tns:resourcedIssuedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_returnResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:returnResource" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_returnResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:returnResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issuedResources_InputMessage">
+    <wsdl:part name="parameters" element="tns:issuedResources" />
+  </wsdl:message>
+  <wsdl:message name="ITransactions_issuedResources_OutputMessage">
+    <wsdl:part name="parameters" element="tns:issuedResourcesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransactions">
+    <wsdl:operation name="issueBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/issueBook" message="tns:ITransactions_issueBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/issueBookResponse" message="tns:ITransactions_issueBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="issueComic">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/issueComic" message="tns:ITransactions_issueComic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/issueComicResponse" message="tns:ITransactions_issueComic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="issuePastP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/issuePastP" message="tns:ITransactions_issuePastP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/issuePastPResponse" message="tns:ITransactions_issuePastP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="issueNewsMag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/issueNewsMag" message="tns:ITransactions_issueNewsMag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/issueNewsMagResponse" message="tns:ITransactions_issueNewsMag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="issueVidDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/issueVidDoc" message="tns:ITransactions_issueVidDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/issueVidDocResponse" message="tns:ITransactions_issueVidDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unReturnedCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/unReturnedCount" message="tns:ITransactions_unReturnedCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/unReturnedCountResponse" message="tns:ITransactions_unReturnedCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="resourcedIssued">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/resourcedIssued" message="tns:ITransactions_resourcedIssued_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/resourcedIssuedResponse" message="tns:ITransactions_resourcedIssued_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnResource">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/returnResource" message="tns:ITransactions_returnResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/returnResourceResponse" message="tns:ITransactions_returnResource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="issuedResources">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactions/issuedResources" message="tns:ITransactions_issuedResources_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactions/issuedResourcesResponse" message="tns:ITransactions_issuedResources_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransactions" type="tns:ITransactions">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="issueBook">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/issueBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="issueComic">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/issueComic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="issuePastP">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/issuePastP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="issueNewsMag">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/issueNewsMag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="issueVidDoc">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/issueVidDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unReturnedCount">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/unReturnedCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resourcedIssued">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/resourcedIssued" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnResource">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/returnResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="issuedResources">
+      <soap:operation soapAction="http://tempuri.org/ITransactions/issuedResources" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Transactions">
+    <wsdl:port name="BasicHttpBinding_ITransactions" binding="tns:BasicHttpBinding_ITransactions">
+      <soap:address location="http://192.168.0.12:8733/TransactionServer/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

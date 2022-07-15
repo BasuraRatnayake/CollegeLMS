@@ -1,0 +1,16 @@
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\bin\Debug\FileServerHost.exe.config
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\bin\Debug\FileServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\bin\Debug\FileServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\bin\Debug\FileServer.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\bin\Debug\FileServer.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\obj\Debug\FileServerHost.csprojResolveAssemblyReference.cache
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\obj\Debug\FileServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\FileServer\FileServerHost\obj\Debug\FileServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\bin\Debug\FileServerHost.exe.config
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\obj\Debug\FileServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\obj\Debug\FileServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\bin\Debug\FileServerHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\bin\Debug\FileServerHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\bin\Debug\FileServer.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\bin\Debug\FileServer.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\FileServer\FileServerHost\obj\Debug\FileServerHost.csprojResolveAssemblyReference.cache

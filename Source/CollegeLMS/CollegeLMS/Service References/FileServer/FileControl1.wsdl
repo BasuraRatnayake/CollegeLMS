@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FileControl" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IFileControl_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.10:8080/FileServer/?xsd=xsd1" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.10:8080/FileServer/?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://192.168.0.10:8080/FileServer/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ResponseFile">
+    <wsdl:part name="parameters" element="tns:ResponseFile" />
+  </wsdl:message>
+  <wsdl:message name="ResponseFile_Headers">
+    <wsdl:part name="Directory" element="tns:Directory" />
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="Length" element="tns:Length" />
+    <wsdl:part name="byteStart" element="tns:byteStart" />
+  </wsdl:message>
+  <wsdl:message name="IFileControl_UploadFile_OutputMessage" />
+  <wsdl:message name="RequestFile">
+    <wsdl:part name="parameters" element="tns:RequestFile" />
+  </wsdl:message>
+  <wsdl:message name="ResponseFileDownload">
+    <wsdl:part name="parameters" element="tns:ResponseFileDownload" />
+  </wsdl:message>
+  <wsdl:message name="ResponseFileDownload_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="Length" element="tns:Length" />
+    <wsdl:part name="byteStart" element="tns:byteStart" />
+  </wsdl:message>
+  <wsdl:message name="IFileControl_deleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFile" />
+  </wsdl:message>
+  <wsdl:message name="IFileControl_deleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFileControl">
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileControl/UploadFile" name="ResponseFile" message="tns:ResponseFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileControl/UploadFileResponse" message="tns:IFileControl_UploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileControl/DownloadFile" name="RequestFile" message="tns:RequestFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileControl/DownloadFileResponse" name="ResponseFileDownload" message="tns:ResponseFileDownload" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileControl/deleteFile" message="tns:IFileControl_deleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileControl/deleteFileResponse" message="tns:IFileControl_deleteFile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFileControl" type="tns:IFileControl">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IFileControl_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/IFileControl/UploadFile" style="document" />
+      <wsdl:input name="ResponseFile">
+        <soap:header message="tns:ResponseFile_Headers" part="Directory" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="Length" use="literal" />
+        <soap:header message="tns:ResponseFile_Headers" part="byteStart" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IFileControl/DownloadFile" style="document" />
+      <wsdl:input name="RequestFile">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ResponseFileDownload">
+        <soap:header message="tns:ResponseFileDownload_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:ResponseFileDownload_Headers" part="Length" use="literal" />
+        <soap:header message="tns:ResponseFileDownload_Headers" part="byteStart" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFile">
+      <soap:operation soapAction="http://tempuri.org/IFileControl/deleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileControl">
+    <wsdl:port name="BasicHttpBinding_IFileControl" binding="tns:BasicHttpBinding_IFileControl">
+      <soap:address location="http://192.168.0.10:8080/FileServerLibrary/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

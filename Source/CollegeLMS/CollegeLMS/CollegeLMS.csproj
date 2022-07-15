@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6842E5D-8384-40AB-8E43-D7289507DE6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CollegeLMS</RootNamespace>
+    <AssemblyName>CollegeLMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CollegeLMS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>C:\Users\BASURA\Desktop\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>C:\Users\BASURA\Desktop\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>C:\Users\BASURA\Desktop\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib.BarcodeReader">
+      <HintPath>C:\Users\BASURA\Desktop\BarcodeLib.BarcodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>C:\Users\BASURA\Desktop\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>C:\Users\BASURA\Desktop\New folder\MetroFramework\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\BASURA\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Books\addBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\addBook.Designer.cs">
+      <DependentUpon>addBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\memberLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\memberLogin.Designer.cs">
+      <DependentUpon>memberLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\authorize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\authorize.Designer.cs">
+      <DependentUpon>authorize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueResources\issuedResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueResources\issuedResource.Designer.cs">
+      <DependentUpon>issuedResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueResources\issueR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueResources\issueR.Designer.cs">
+      <DependentUpon>issueR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueResources\scanIDR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueResources\scanIDR.Designer.cs">
+      <DependentUpon>scanIDR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueResources\showIssues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueResources\showIssues.Designer.cs">
+      <DependentUpon>showIssues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\revokeMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\revokeMember.Designer.cs">
+      <DependentUpon>revokeMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\newAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\newAddress.Designer.cs">
+      <DependentUpon>newAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\newContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\newContact.Designer.cs">
+      <DependentUpon>newContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\showLoginDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\showLoginDV.Designer.cs">
+      <DependentUpon>showLoginDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\showLoginD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\showLoginD.Designer.cs">
+      <DependentUpon>showLoginD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastpapers\choosePastpaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastpapers\choosePastpaper.Designer.cs">
+      <DependentUpon>choosePastpaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastpapers\modifyPastpapers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastpapers\modifyPastpapers.designer.cs">
+      <DependentUpon>modifyPastpapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comics\chooseComic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comics\chooseComic.Designer.cs">
+      <DependentUpon>chooseComic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comics\modifyComic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comics\modifyComic.designer.cs">
+      <DependentUpon>modifyComic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comics\showComics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comics\showComics.designer.cs">
+      <DependentUpon>showComics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comics\showComic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comics\showComic.Designer.cs">
+      <DependentUpon>showComic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comics\showQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comics\showQR.Designer.cs">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastpapers\showPastpaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastpapers\showPastpaper.Designer.cs">
+      <DependentUpon>showPastpaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastpapers\showPastpapers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastpapers\showPastpapers.designer.cs">
+      <DependentUpon>showPastpapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastpapers\showQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastpapers\showQR.Designer.cs">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn\newEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn\newEmail.Designer.cs">
+      <DependentUpon>newEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video\chooseVidD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video\chooseVidD.Designer.cs">
+      <DependentUpon>chooseVidD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video\modifyVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video\modifyVideo.designer.cs">
+      <DependentUpon>modifyVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper\modifyNewspaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newspaper\modifyNewspaper.designer.cs">
+      <DependentUpon>modifyNewspaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\chooseBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\chooseBook.Designer.cs">
+      <DependentUpon>chooseBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\modifyBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\modifyBook.designer.cs">
+      <DependentUpon>modifyBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\showBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\showBook.Designer.cs">
+      <DependentUpon>showBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\showBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\showBooks.Designer.cs">
+      <DependentUpon>showBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Camera.cs" />
+    <Compile Include="Comics\addComic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comics\addComic.designer.cs">
+      <DependentUpon>addComic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\adminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\adminPanel.Designer.cs">
+      <DependentUpon>adminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\adminPanelI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\adminPanelI.Designer.cs">
+      <DependentUpon>adminPanelI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\adminPanelM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\adminPanelM.Designer.cs">
+      <DependentUpon>adminPanelM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\adminPanelS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\adminPanelS.Designer.cs">
+      <DependentUpon>adminPanelS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\chooseUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\chooseUser.Designer.cs">
+      <DependentUpon>chooseUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\scanItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\scanItem.Designer.cs">
+      <DependentUpon>scanItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\showQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\showQR.Designer.cs">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encryptions.cs" />
+    <Compile Include="FileHandle.cs" />
+    <Compile Include="GUIEffects.cs" />
+    <Compile Include="LibraryCard\generateCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryCard\generateCard.Designer.cs">
+      <DependentUpon>generateCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryCard\scanCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryCard\scanCard.Designer.cs">
+      <DependentUpon>scanCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper\addNewspaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newspaper\addNewspaper.designer.cs">
+      <DependentUpon>addNewspaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper\chooseNewM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newspaper\chooseNewM.Designer.cs">
+      <DependentUpon>chooseNewM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper\showNewspaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newspaper\showNewspaper.Designer.cs">
+      <DependentUpon>showNewspaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper\showNewspapers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newspaper\showNewspapers.designer.cs">
+      <DependentUpon>showNewspapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper\showQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newspaper\showQR.Designer.cs">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastpapers\addPastpapers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastpapers\addPastpapers.designer.cs">
+      <DependentUpon>addPastpapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Register\generate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\generate.Designer.cs">
+      <DependentUpon>generate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\generateSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\generateSuccess.Designer.cs">
+      <DependentUpon>generateSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\success.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\success.Designer.cs">
+      <DependentUpon>success.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\validate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\validate.Designer.cs">
+      <DependentUpon>validate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FileServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DatabaseServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn\newPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn\newPassword.Designer.cs">
+      <DependentUpon>newPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn\signIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn\signIn.Designer.cs">
+      <DependentUpon>signIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="startUpCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startUpCheck.Designer.cs">
+      <DependentUpon>startUpCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <Compile Include="Video\addVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video\addVideo.designer.cs">
+      <DependentUpon>addVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video\showQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video\showQR.Designer.cs">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video\showVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video\showVideo.Designer.cs">
+      <DependentUpon>showVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video\showVideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video\showVideos.designer.cs">
+      <DependentUpon>showVideos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Books\addBook.resx">
+      <DependentUpon>addBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\memberLogin.resx">
+      <DependentUpon>memberLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\authorize.resx">
+      <DependentUpon>authorize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueResources\issuedResource.resx">
+      <DependentUpon>issuedResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueResources\issueR.resx">
+      <DependentUpon>issueR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueResources\scanIDR.resx">
+      <DependentUpon>scanIDR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueResources\showIssues.resx">
+      <DependentUpon>showIssues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\revokeMember.resx">
+      <DependentUpon>revokeMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\newAddress.resx">
+      <DependentUpon>newAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\newContact.resx">
+      <DependentUpon>newContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\showLoginDV.resx">
+      <DependentUpon>showLoginDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\showLoginD.resx">
+      <DependentUpon>showLoginD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastpapers\choosePastpaper.resx">
+      <DependentUpon>choosePastpaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastpapers\modifyPastpapers.resx">
+      <DependentUpon>modifyPastpapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comics\chooseComic.resx">
+      <DependentUpon>chooseComic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comics\modifyComic.resx">
+      <DependentUpon>modifyComic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comics\showComics.resx">
+      <DependentUpon>showComics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comics\showComic.resx">
+      <DependentUpon>showComic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comics\showQR.resx">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastpapers\showPastpaper.resx">
+      <DependentUpon>showPastpaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastpapers\showPastpapers.resx">
+      <DependentUpon>showPastpapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastpapers\showQR.resx">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn\newEmail.resx">
+      <DependentUpon>newEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video\chooseVidD.resx">
+      <DependentUpon>chooseVidD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video\modifyVideo.resx">
+      <DependentUpon>modifyVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newspaper\modifyNewspaper.resx">
+      <DependentUpon>modifyNewspaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\chooseBook.resx">
+      <DependentUpon>chooseBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\modifyBook.resx">
+      <DependentUpon>modifyBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\showBook.resx">
+      <DependentUpon>showBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\showBooks.resx">
+      <DependentUpon>showBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comics\addComic.resx">
+      <DependentUpon>addComic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\adminPanel.resx">
+      <DependentUpon>adminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\adminPanelI.resx">
+      <DependentUpon>adminPanelI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\adminPanelM.resx">
+      <DependentUpon>adminPanelM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\adminPanelS.resx">
+      <DependentUpon>adminPanelS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\chooseUser.resx">
+      <DependentUpon>chooseUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\scanItem.resx">
+      <DependentUpon>scanItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\showQR.resx">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryCard\generateCard.resx">
+      <DependentUpon>generateCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryCard\scanCard.resx">
+      <DependentUpon>scanCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newspaper\addNewspaper.resx">
+      <DependentUpon>addNewspaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newspaper\chooseNewM.resx">
+      <DependentUpon>chooseNewM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newspaper\showNewspaper.resx">
+      <DependentUpon>showNewspaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newspaper\showNewspapers.resx">
+      <DependentUpon>showNewspapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newspaper\showQR.resx">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastpapers\addPastpapers.resx">
+      <DependentUpon>addPastpapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\generate.resx">
+      <DependentUpon>generate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\generateSuccess.resx">
+      <DependentUpon>generateSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\success.resx">
+      <DependentUpon>success.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\validate.resx">
+      <DependentUpon>validate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn\newPassword.resx">
+      <DependentUpon>newPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn\signIn.resx">
+      <DependentUpon>signIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startUpCheck.resx">
+      <DependentUpon>startUpCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video\addVideo.resx">
+      <DependentUpon>addVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video\showQR.resx">
+      <DependentUpon>showQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video\showVideo.resx">
+      <DependentUpon>showVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video\showVideos.resx">
+      <DependentUpon>showVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\DatabaseServer\Arrays1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DatabaseServer\service1.wsdl" />
+    <None Include="Service References\DatabaseServer\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DatabaseServer\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileServer\CollegeLMS.FileServer.ResponseFileDownload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileServer\CollegeLMS.FileServer.UploadFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileServer\FileControl1.wsdl" />
+    <None Include="Service References\FileServer\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileServer\item31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileServer\item32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServer\item21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServer\Transactions1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rightBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resources.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digiResources.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountsets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\root.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\root1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pressrelease_084755.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discount_Cards_All.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poster-default-96-1424139.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Credit report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-lockscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User0000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2205910-avatar-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FileServer\" />
+    <WCFMetadataStorage Include="Service References\DatabaseServer\" />
+    <WCFMetadataStorage Include="Service References\TransactionServer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DatabaseServer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DatabaseServer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DatabaseServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IDCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileServer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileServer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finished_sun_rays1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionServer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionServer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionServer\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionServer\item1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileServer\item1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

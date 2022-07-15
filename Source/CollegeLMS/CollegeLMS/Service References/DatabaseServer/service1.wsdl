@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DatabaseServer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDatabaseServer_addBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBook" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:showBook" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeBook" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyBook" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addNewspaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewspaper" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addNewspaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewspaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showNewspapers_InputMessage">
+    <wsdl:part name="parameters" element="tns:showNewspapers" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showNewspapers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showNewspapersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyNewspaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyNewspaper" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyNewspaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyNewspaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeNewspaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeNewspaper" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeNewspaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeNewspaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addComic_InputMessage">
+    <wsdl:part name="parameters" element="tns:addComic" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addComic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addComicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showComics_InputMessage">
+    <wsdl:part name="parameters" element="tns:showComics" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showComics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showComicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyComic_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyComic" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyComic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyComicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeComic_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeComic" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeComic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeComicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addDocVid_InputMessage">
+    <wsdl:part name="parameters" element="tns:addDocVid" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addDocVid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addDocVidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showVidDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:showVidDoc" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showVidDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showVidDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyVidDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyVidDoc" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyVidDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyVidDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeVidDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeVidDoc" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removeVidDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeVidDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addPastPaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:addPastPaper" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_addPastPaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addPastPaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showPastPapers_InputMessage">
+    <wsdl:part name="parameters" element="tns:showPastPapers" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showPastPapers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showPastPapersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyPastPaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyPastPaper" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_modifyPastPaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyPastPaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removePastPaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:removePastPaper" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_removePastPaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removePastPaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_resouceValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:resouceValid" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_resouceValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:resouceValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTitle" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getResourcePic_InputMessage">
+    <wsdl:part name="parameters" element="tns:getResourcePic" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getResourcePic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getResourcePicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberPass_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberPass" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberPass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberUsername" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberPass_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberPass" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberPass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberEmail" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberContact" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberAddress" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_changeMemberAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeMemberAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showMemberDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:showMemberDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_showMemberDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showMemberDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_revokeMembership_InputMessage">
+    <wsdl:part name="parameters" element="tns:revokeMembership" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_revokeMembership_OutputMessage">
+    <wsdl:part name="parameters" element="tns:revokeMembershipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberName" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberPic_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberPic" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getMemberPic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberPicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_regIDsAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:regIDsAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_regIDsAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:regIDsAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_regCodeAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:regCodeAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_regCodeAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:regCodeAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_insertRegCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertRegCode" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_insertRegCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertRegCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:validLogin" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_userRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:userRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_userRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:userRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:validUsername" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:validEmail" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_registerUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerUser" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_registerUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validNIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:validNIC" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_validNIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validNICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getLICDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLICDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDatabaseServer_getLICDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLICDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDatabaseServer">
+    <wsdl:operation name="addBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/addBook" message="tns:IDatabaseServer_addBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/addBookResponse" message="tns:IDatabaseServer_addBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/showBook" message="tns:IDatabaseServer_showBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/showBookResponse" message="tns:IDatabaseServer_showBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/removeBook" message="tns:IDatabaseServer_removeBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/removeBookResponse" message="tns:IDatabaseServer_removeBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/modifyBook" message="tns:IDatabaseServer_modifyBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/modifyBookResponse" message="tns:IDatabaseServer_modifyBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewspaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/addNewspaper" message="tns:IDatabaseServer_addNewspaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/addNewspaperResponse" message="tns:IDatabaseServer_addNewspaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showNewspapers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/showNewspapers" message="tns:IDatabaseServer_showNewspapers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/showNewspapersResponse" message="tns:IDatabaseServer_showNewspapers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyNewspaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/modifyNewspaper" message="tns:IDatabaseServer_modifyNewspaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/modifyNewspaperResponse" message="tns:IDatabaseServer_modifyNewspaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeNewspaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/removeNewspaper" message="tns:IDatabaseServer_removeNewspaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/removeNewspaperResponse" message="tns:IDatabaseServer_removeNewspaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addComic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/addComic" message="tns:IDatabaseServer_addComic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/addComicResponse" message="tns:IDatabaseServer_addComic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showComics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/showComics" message="tns:IDatabaseServer_showComics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/showComicsResponse" message="tns:IDatabaseServer_showComics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyComic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/modifyComic" message="tns:IDatabaseServer_modifyComic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/modifyComicResponse" message="tns:IDatabaseServer_modifyComic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeComic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/removeComic" message="tns:IDatabaseServer_removeComic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/removeComicResponse" message="tns:IDatabaseServer_removeComic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addDocVid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/addDocVid" message="tns:IDatabaseServer_addDocVid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/addDocVidResponse" message="tns:IDatabaseServer_addDocVid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showVidDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/showVidDoc" message="tns:IDatabaseServer_showVidDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/showVidDocResponse" message="tns:IDatabaseServer_showVidDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyVidDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/modifyVidDoc" message="tns:IDatabaseServer_modifyVidDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/modifyVidDocResponse" message="tns:IDatabaseServer_modifyVidDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeVidDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/removeVidDoc" message="tns:IDatabaseServer_removeVidDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/removeVidDocResponse" message="tns:IDatabaseServer_removeVidDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPastPaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/addPastPaper" message="tns:IDatabaseServer_addPastPaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/addPastPaperResponse" message="tns:IDatabaseServer_addPastPaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showPastPapers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/showPastPapers" message="tns:IDatabaseServer_showPastPapers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/showPastPapersResponse" message="tns:IDatabaseServer_showPastPapers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyPastPaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/modifyPastPaper" message="tns:IDatabaseServer_modifyPastPaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/modifyPastPaperResponse" message="tns:IDatabaseServer_modifyPastPaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removePastPaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/removePastPaper" message="tns:IDatabaseServer_removePastPaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/removePastPaperResponse" message="tns:IDatabaseServer_removePastPaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="resouceValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/resouceValid" message="tns:IDatabaseServer_resouceValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/resouceValidResponse" message="tns:IDatabaseServer_resouceValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/getTitle" message="tns:IDatabaseServer_getTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/getTitleResponse" message="tns:IDatabaseServer_getTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getResourcePic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPDResources/getResourcePic" message="tns:IDatabaseServer_getResourcePic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPDResources/getResourcePicResponse" message="tns:IDatabaseServer_getResourcePic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberPass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/getMemberPass" message="tns:IDatabaseServer_getMemberPass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/getMemberPassResponse" message="tns:IDatabaseServer_getMemberPass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/getMemberUsername" message="tns:IDatabaseServer_getMemberUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/getMemberUsernameResponse" message="tns:IDatabaseServer_getMemberUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberPass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/changeMemberPass" message="tns:IDatabaseServer_changeMemberPass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/changeMemberPassResponse" message="tns:IDatabaseServer_changeMemberPass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/changeMemberEmail" message="tns:IDatabaseServer_changeMemberEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/changeMemberEmailResponse" message="tns:IDatabaseServer_changeMemberEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/changeMemberContact" message="tns:IDatabaseServer_changeMemberContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/changeMemberContactResponse" message="tns:IDatabaseServer_changeMemberContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/changeMemberAddress" message="tns:IDatabaseServer_changeMemberAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/changeMemberAddressResponse" message="tns:IDatabaseServer_changeMemberAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showMemberDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/showMemberDetails" message="tns:IDatabaseServer_showMemberDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/showMemberDetailsResponse" message="tns:IDatabaseServer_showMemberDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="revokeMembership">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/revokeMembership" message="tns:IDatabaseServer_revokeMembership_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/revokeMembershipResponse" message="tns:IDatabaseServer_revokeMembership_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/getMemberName" message="tns:IDatabaseServer_getMemberName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/getMemberNameResponse" message="tns:IDatabaseServer_getMemberName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberPic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMember/getMemberPic" message="tns:IDatabaseServer_getMemberPic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMember/getMemberPicResponse" message="tns:IDatabaseServer_getMemberPic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="regIDsAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/regIDsAvailable" message="tns:IDatabaseServer_regIDsAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/regIDsAvailableResponse" message="tns:IDatabaseServer_regIDsAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="regCodeAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/regCodeAvailable" message="tns:IDatabaseServer_regCodeAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/regCodeAvailableResponse" message="tns:IDatabaseServer_regCodeAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertRegCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/insertRegCode" message="tns:IDatabaseServer_insertRegCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/insertRegCodeResponse" message="tns:IDatabaseServer_insertRegCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/validLogin" message="tns:IDatabaseServer_validLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/validLoginResponse" message="tns:IDatabaseServer_validLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="userRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/userRegistered" message="tns:IDatabaseServer_userRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/userRegisteredResponse" message="tns:IDatabaseServer_userRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/validUsername" message="tns:IDatabaseServer_validUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/validUsernameResponse" message="tns:IDatabaseServer_validUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/validEmail" message="tns:IDatabaseServer_validEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/validEmailResponse" message="tns:IDatabaseServer_validEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/registerUser" message="tns:IDatabaseServer_registerUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/registerUserResponse" message="tns:IDatabaseServer_registerUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validNIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/validNIC" message="tns:IDatabaseServer_validNIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/validNICResponse" message="tns:IDatabaseServer_validNIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLICDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDatabaseServer/getLICDetails" message="tns:IDatabaseServer_getLICDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDatabaseServer/getLICDetailsResponse" message="tns:IDatabaseServer_getLICDetails_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDatabaseServer" type="tns:IDatabaseServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addBook">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/addBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showBook">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/showBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeBook">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/removeBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyBook">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/modifyBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewspaper">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/addNewspaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showNewspapers">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/showNewspapers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyNewspaper">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/modifyNewspaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeNewspaper">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/removeNewspaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addComic">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/addComic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showComics">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/showComics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyComic">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/modifyComic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeComic">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/removeComic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDocVid">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/addDocVid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showVidDoc">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/showVidDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyVidDoc">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/modifyVidDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeVidDoc">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/removeVidDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPastPaper">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/addPastPaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showPastPapers">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/showPastPapers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPastPaper">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/modifyPastPaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePastPaper">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/removePastPaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resouceValid">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/resouceValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTitle">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/getTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getResourcePic">
+      <soap:operation soapAction="http://tempuri.org/IPDResources/getResourcePic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberPass">
+      <soap:operation soapAction="http://tempuri.org/IMember/getMemberPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberUsername">
+      <soap:operation soapAction="http://tempuri.org/IMember/getMemberUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberPass">
+      <soap:operation soapAction="http://tempuri.org/IMember/changeMemberPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberEmail">
+      <soap:operation soapAction="http://tempuri.org/IMember/changeMemberEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberContact">
+      <soap:operation soapAction="http://tempuri.org/IMember/changeMemberContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeMemberAddress">
+      <soap:operation soapAction="http://tempuri.org/IMember/changeMemberAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showMemberDetails">
+      <soap:operation soapAction="http://tempuri.org/IMember/showMemberDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="revokeMembership">
+      <soap:operation soapAction="http://tempuri.org/IMember/revokeMembership" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberName">
+      <soap:operation soapAction="http://tempuri.org/IMember/getMemberName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberPic">
+      <soap:operation soapAction="http://tempuri.org/IMember/getMemberPic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="regIDsAvailable">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/regIDsAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="regCodeAvailable">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/regCodeAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRegCode">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/insertRegCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validLogin">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/validLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userRegistered">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/userRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validUsername">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/validUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validEmail">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/validEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/registerUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validNIC">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/validNIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLICDetails">
+      <soap:operation soapAction="http://tempuri.org/IDatabaseServer/getLICDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DatabaseServer">
+    <wsdl:port name="BasicHttpBinding_IDatabaseServer" binding="tns:BasicHttpBinding_IDatabaseServer">
+      <soap:address location="http://192.168.0.13:8565/DatabaseServer" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

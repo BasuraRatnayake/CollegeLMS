@@ -1,0 +1,18 @@
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\bin\Debug\TransactionHost.exe.config
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\bin\Debug\TransactionHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\bin\Debug\TransactionHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\bin\Debug\TransactionServer.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\bin\Debug\TransactionServer.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\obj\Debug\TransactionHost.csprojResolveAssemblyReference.cache
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\obj\Debug\TransactionHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\TransactionServer\TransactionHost\obj\Debug\TransactionHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\bin\Debug\TransactionHost.exe.config
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\obj\Debug\TransactionHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\obj\Debug\TransactionHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\bin\Debug\TransactionHost.exe
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\bin\Debug\TransactionHost.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\bin\Debug\TransactionServer.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\bin\Debug\TransactionServer.pdb
+D:\Documents\NSBM\Year 2\Semester 2\Intergrating Project\PROJ202SL - ForeRunner's Project\TransactionServer\TransactionHost\obj\Debug\TransactionHost.csprojResolveAssemblyReference.cache
